@@ -1,0 +1,56 @@
+.Event {
+    background-color: #fff;
+    border: 1px solid #bdeaf7;
+    border-radius: 8px;
+    margin-bottom: 16px;
+    text-align: left;
+}
+
+.EventContent {
+    color: #494949;
+    margin-top: 20px;
+    padding: 10px;
+    border-radius: 5px;
+    white-space: pre-wrap; 
+    word-break: break-word;
+}
+
+.EventBar {
+    border-top: 1px solid #dadadf;
+    margin-top: 20px;
+    padding-top: 10px;
+}
+
+.Event figure,
+h5 {
+    margin: 0 0;
+}
+
+.Title {
+    margin-top: 25px;
+    margin-bottom: 20px;
+    color: #2d649b;
+    font-weight: bold;
+}
+
+.Joined {
+    color: #54d9ff;
+}
+
+.NotJoined {
+    color: #2d649b;
+}
+
+.JoinImpossible:hover {
+    color: #000;
+}
+
+.Row {
+    justify-content: space-evenly;
+
+}
+
+.Icon > i {
+  color:#2d649b;
+  cursor: default;
+}

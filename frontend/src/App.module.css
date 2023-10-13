@@ -1,0 +1,93 @@
+.App {
+  font-family: 'Open Sans', sans-serif;
+  background-color: #F6F6F6;
+  min-height: 100vh;
+}
+
+.Main {
+  padding-top: 81px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: #fff;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+  color: #2d649b;
+}
+
+a:hover i {
+  color: #54d9ff;
+  transition: color ease-in-out 0.3s;
+}
+
+i {
+  color: #2d649b;
+  font-size: 1.3rem;
+  padding: 10px;
+  vertical-align: middle;
+}
+
+i:hover {
+  cursor: pointer;
+  transition: color ease-in-out 0.3s;
+  color: #54d9ff;
+}
+
+.Content {
+  background-color: #fff;
+  padding: 14px;
+  border-radius: 7px;
+  margin-bottom: 16px;
+  border: 1px solid #bdeaf7;
+}
+
+.Content h2 {
+  font-family: 'Open Sans', sans-serif;
+  color: #2d649b;
+  font-size: 22px;
+  text-align: center;
+  margin: 0.5rem!important;
+}
+
+.FillerImage {
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+}
+
+.Image {
+  max-height: 40vh;
+  max-width: 100%;
+  object-fit: contain;
+}
+
+.headerText {
+  color: #2d649b;
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+
+figure {
+  text-align: center;
+  display: inline-block;
+}
+
+input[type="file"] {
+  display: none;
+}
+
+.Owner {
+  font-weight: bold;
+}
+

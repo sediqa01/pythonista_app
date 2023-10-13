@@ -1,0 +1,12 @@
+.Container {
+  min-height: 400px;
+  background-color: #fff;
+  width: 95%;
+  border-radius: 8px;
+  }
+
+  .error {
+    color: red;
+    font-size: 14px;
+    margin-top: 4px;
+  }

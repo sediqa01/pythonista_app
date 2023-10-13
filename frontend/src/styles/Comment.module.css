@@ -1,0 +1,30 @@
+.Form {
+    border: none;
+    border-bottom: 2px  solid #54d9ff;
+}
+
+.Button {
+    border: none;
+    background-color: #2d649b;
+    color: #fff;
+    border-radius: 100px;
+    padding: 4px 10px;
+    min-width: 75px;
+}
+
+.Button:hover {
+    cursor: pointer;
+    background-color: #54d9ff;
+    color: #2d649b;
+}
+
+.Owner {
+    font-weight: bold;
+    color: #2d649b;
+    margin-right: 8px;
+}
+
+.Date {
+    font-weight: lighter;
+    color: #c1c1c5;
+}

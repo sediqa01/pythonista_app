@@ -1,0 +1,29 @@
+.Post {
+    background-color: #fff;
+    border-radius: 8px;
+    margin-bottom: 16px;
+    text-align: left;
+    border: 1px solid #bdeaf7;
+  }
+  
+  .PostContent {
+    color: #494949;
+    margin-top: 20px;
+    padding: 10px;
+    border-radius: 5px;
+    white-space: pre-wrap; 
+    word-break: break-word;
+  }
+
+.Post figure,
+  h5 {
+    margin: 0 0;
+}
+
+.LikeImpossible:hover {
+    color: #000;
+}
+
+.Liked {
+  color: #54d9ff;
+}

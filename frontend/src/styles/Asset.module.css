@@ -1,0 +1,49 @@
+
+  .Asset {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 120px;
+  }
+  .Asset:hover {
+    cursor: pointer;
+  }
+
+  .text {
+    color: #83a5aa;
+  }
+
+  .Icon {
+    font-size: 260%;
+    background-color:  #54d9ff;
+    color:#2d649b;
+    border-radius: 50%;
+    box-shadow: 0 0 0 0.2rem rgba(84, 217, 255, 0.5);
+  }
+
+  .Icon:hover {
+    color:#2d649b;
+    cursor: default;
+  }
+
+  .Spinner {
+    background-color: #54d9ff;
+  }
+  
+  /* scrollbar */
+*::-webkit-scrollbar {
+  width: 5px;
+}
+
+*::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+*::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+*::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
