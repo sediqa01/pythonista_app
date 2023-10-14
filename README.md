@@ -658,7 +658,7 @@ if 'CLIENT_ORIGIN_DEV' in os.environ:
 
  * **Navigation Bar**
 
-    ![NavBar](src/assets/readme/navbar-desktop.jpg)
+    ![NavBar](frontend/src/assets/readme/navbar-desktop.jpg)
 
     The navigation bar includes various clickable links, allowing the user to easily access the pages on the app. The links change according to whether the user is signed in or out, giving them access to more content once signed in.
     The links on the navbar are:
@@ -684,21 +684,21 @@ if 'CLIENT_ORIGIN_DEV' in os.environ:
 
 * **Navbar When users are not loggedIn**
 
-    ![Mobile Navbar](src/assets/readme/loggedoutNavbar.jpg)
+    ![Mobile Navbar](frontend/src/assets/readme/loggedoutNavbar.jpg)
 
 * **Navbar in Mobile's Screen**
 
-    ![Mobile Navbar](src/assets/readme/mobileNavbar.jpg)
+    ![Mobile Navbar](frontend/src/assets/readme/mobileNavbar.jpg)
 
 * **Navbar in Tablet's Screen**
 
-    ![Mobile Navbar](src/assets/readme/tabletNavbar.jpg)
+    ![Mobile Navbar](frontend/src/assets/readme/tabletNavbar.jpg)
 
 
 
 * **Home Page**
 
-  ![Home Page](src/assets/readme/home.jpg)
+  ![Home Page](frontend/src/assets/readme/home.jpg)
 
     The homepage is the user's first port of call and consists of user posts, post search, discover profiles.
 
@@ -708,7 +708,7 @@ if 'CLIENT_ORIGIN_DEV' in os.environ:
 
 * **Post Page**
 
-    ![Post Page](src/assets/readme/postPage.jpg)
+    ![Post Page](frontend/src/assets/readme/postPage.jpg)
 
     The post page contains further information on the post in question, as well as the homepage version of the post.
 
@@ -720,19 +720,19 @@ if 'CLIENT_ORIGIN_DEV' in os.environ:
 
 * **Create Post Form**
 
-    ![Event Page](src/assets/readme/postForm.jpg)
+    ![Event Page](frontend/src/assets/readme/postForm.jpg)
 
     If users are logged in, they are able to share new posts with the community. By clicking on the Create Post Icon in the Navigation Bar, they are taken to the Share a new post page, where they can submit the post creation form to the API.
 
 * **Post Edit Form**
 
-    ![Post Edit Form](src/assets/readme/editPost.jpg)
+    ![Post Edit Form](frontend/src/assets/readme/editPost.jpg)
 
     If user click on a post it will take the user to the post page, by clicking the more button near post date , users can find the edit post feature there. By clicking edit users can see post creation form, but the fields are already pre-populated with the existing post information. You can edit the desired fields and save the changes, which will return you to the post detail page and you can see that the post has been updated successfully.
 
 * **Events Page**
 
-    ![Event Page](src/assets/readme/eventPage.jpg)
+    ![Event Page](frontend/src/assets/readme/eventPage.jpg)
 
    The events page contains user-created events.
 
@@ -747,14 +747,14 @@ if 'CLIENT_ORIGIN_DEV' in os.environ:
 
 * **Event Page**
 
-    ![Event Post](src/assets/readme/pageEvent.jpg)
+    ![Event Post](frontend/src/assets/readme/pageEvent.jpg)
 
     The features here are:
     * Ability to edit or delete event if you are the owner of the event.
 
 * **Create Event  Form**
 
-    ![Create Event Page](src/assets/readme/eventForm.jpg)
+    ![Create Event Page](frontend/src/assets/readme/eventForm.jpg)
 
     If you are logged in, you are able to share new events with the community. By clicking on the Add Event menu option in the Navigation Bar, you are taken to the Share a New Event page, where you can submit the event creation form to the API.
     Create Event Form consist of event picture, title, description, event date, start time, end time, location and organizer.
@@ -762,7 +762,7 @@ if 'CLIENT_ORIGIN_DEV' in os.environ:
 
 * **Edit Event Form**
 
-    ![Edit Event Page](src/assets/readme/editEvent.jpg)
+    ![Edit Event Page](frontend/src/assets/readme/editEvent.jpg)
 
     By clicking Edit, you are taken back to the event creation form, but the fields are already pre-populated with the existing event information. You can edit the desired fields and save the changes, which will return you to the event detail page and you can see that the event has been updated successfully.
 
@@ -771,12 +771,12 @@ if 'CLIENT_ORIGIN_DEV' in os.environ:
    The Create Event Form is validated to determine that users are not able to add an event in the past; if users add an event date in the past, the form will raise an error that the event cannot be in the past. It will avoid entering the wrong date.
 
 
-    ![Event Date](src/assets/readme/eventDate.jpg)
+    ![Event Date](frontend/src/assets/readme/eventDate.jpg)
 
 
 * **Profile Page**
 
-    ![Profile Page](src/assets/readme/profilePage.jpg)
+    ![Profile Page](frontend/src/assets/readme/profilePage.jpg)
 
     The profile page consists conists of the selected user's profile - either your own via the navbar, or other users via clicking on their profile images.
 
@@ -790,7 +790,7 @@ if 'CLIENT_ORIGIN_DEV' in os.environ:
 
 * **Edit Profile Page**
 
-    ![Edit Profile Page](src/assets/readme/editProfile.jpg)
+    ![Edit Profile Page](frontend/src/assets/readme/editProfile.jpg)
 
     By clicking the Edit Profile option, they are taken to a new page containing the full profile details form to fill in and submit. Here, they can add their own avatar image, bio, GitHub, website address and LinkedIn.
 
@@ -800,13 +800,13 @@ if 'CLIENT_ORIGIN_DEV' in os.environ:
 
 * **SignUp Page**
 
-    ![SignUp Page](src/assets/readme/signUp.jpg)
+    ![SignUp Page](frontend/src/assets/readme/signUp.jpg)
 
     The sign up page is only accessible if the user is logged out. This page consists of a form to be completed in order to sign up and create an account, and a link to the sign in page if the user already has an account.
 
 * **SignIn Page**
 
-    ![SignIn Page](src/assets/readme/signIn.jpg)
+    ![SignIn Page](frontend/src/assets/readme/signIn.jpg)
 
     The sign in page is only accessible if the user is logged out. This page consists of a form to be completed in order to sign in, and a link to the sign up page if the user does not yet have an account.
 
@@ -822,13 +822,13 @@ Enable users to post a Job or apply a Job. I was planning to implement Job featu
 here is the mock-up for Job feature:
 
 * **Job Page**
-![Job Page mock-up](src/assets/readme/jobPage.jpg)
+![Job Page mock-up](frontend/src/assets/readme/jobPage.jpg)
 
 * **Applying For a Job Page**
-![Apply Job Page mock-up](src/assets/readme/applyForm.jpg)
+![Apply Job Page mock-up](frontend/src/assets/readme/applyForm.jpg)
 
 * **Create Job Post Page**
-![Job Form Page mock-up](src/assets/readme/createJob.jpg)
+![Job Form Page mock-up](frontend/src/assets/readme/createJob.jpg)
 
 * **Notification Syatem:**
 Allow users to recive notification when someone leave a comment on her/his post, event post or add reaction on a post.
@@ -842,28 +842,28 @@ Seeing which users are online including links to the chat page, enabling users t
 ### _Mock-Up_
 
 * **Home Page**
-![Home Page mock-up](src/assets/readme/homePage.jpg)
+![Home Page mock-up](frontend/src/assets/readme/homePage.jpg)
 
 * **Create Post Page**
-![Create Post Form mock-up](src/assets/readme/createPost.jpg)
+![Create Post Form mock-up](frontend/src/assets/readme/createPost.jpg)
 
 * **Create Post Page**
-![Create Event Form mock-up](src/assets/readme/createEvent.jpg)
+![Create Event Form mock-up](frontend/src/assets/readme/createEvent.jpg)
 
 * **Event Page**
-![Event Page mock-up](src/assets/readme/event.jpg)
+![Event Page mock-up](frontend/src/assets/readme/event.jpg)
 
 * **Profile Page**
-![Profile Page](src/assets/readme/profile.jpg)
+![Profile Page](frontend/src/assets/readme/profile.jpg)
 
 * **Job Page**
-![Job Page mock-up](src/assets/readme/jobPage.jpg)
+![Job Page mock-up](frontend/src/assets/readme/jobPage.jpg)
 
 * **Applying For a Job Page**
-![Apply Job Page mock-up](src/assets/readme/applyForm.jpg)
+![Apply Job Page mock-up](frontend/src/assets/readme/applyForm.jpg)
 
 * **Create Job Post Page**
-![Job Form Page mock-up](src/assets/readme/createJob.jpg)
+![Job Form Page mock-up](frontend/src/assets/readme/createJob.jpg)
 
 ### _Color_
 
@@ -890,13 +890,13 @@ The Pythonista site has been passed through the W3C CSS Validator .
 * **W3C CSS Validation Results:**
  No errors or warnings were found when the code was passed through the W3C CSS Validation checker.
   
-  ![W3C CSS](src/assets/readme/css.jpg)
+  ![W3C CSS](frontend/src/assets/readme/css.jpg)
 
 
 ### _Automatic Testing_
 The Jest automatic tests have been written to check that the main frontend components render correctly.
 
-![W3C CSS](src/assets/readme/jestTest.jpg)
+![W3C CSS](frontend/src/assets/readme/jestTest.jpg)
 
 
 ### _Manual Testing_
@@ -963,20 +963,20 @@ During the testing process I also used the Responsive Design Checker website to 
 Here are the results:
 
 *  _Desktop View_
-    ![Desktop View](src/assets/readme/des.jpg)
+    ![Desktop View](frontend/src/assets/readme/des.jpg)
 
 *  _Tablet View_
-    ![Tablet View](src/assets/readme/tablet.jpg)
+    ![Tablet View](frontend/src/assets/readme/tablet.jpg)
 
 *  _Mobile View_
 
-    ![Mobile View](src/assets/readme/mobile.jpg)
+    ![Mobile View](frontend/src/assets/readme/mobile.jpg)
 
 
 ### _Lighthouse Testing_
 Google Lighthouse in Chrome Developer Tools was used to test the application within the areas of Performance, Accessibility, Best Practices and SEO.
 
-![Lighthouse Report](src/assets/readme/lightHouse.jpg)
+![Lighthouse Report](frontend/src/assets/readme/lightHouse.jpg)
 
 ## Bugs
 
@@ -984,7 +984,7 @@ Google Lighthouse in Chrome Developer Tools was used to test the application wit
 
 1. During the development of the project, the connection between front-end and backend was disconnected;  And the reason was that the Gitpod URL was changed in the front-end.  With the help of Joanne, one of the tutor team, we connected both apps again.  The solution: By adding CLIENT_ORIGIN_DEV in the env.py file and also in the Heroku config var, the connection was re-established.
 
-    ![Console Error](src/assets/readme/firstError.jpg)
+    ![Console Error](frontend/src/assets/readme/firstError.jpg)
 
 
 2. After installing tools on pythonista app, I've got different versions of some packages that caused, version error.
@@ -994,7 +994,7 @@ for solving this issue, I did the following steps:
     * Deleting your package-lock.json
     * Replacing the dependencies and scripts parts of package.json with CI moments walkthrough ptoject.
 
-    ![Console Error](src/assets/readme/versionError.jpg)
+    ![Console Error](frontend/src/assets/readme/versionError.jpg)
 
 3.  When I was working on the readme file, the screenshots of the project were not displayed in github, but they were displayed well in the preview of gitpod. This problem was in the path of the files because I had written the path of the files (../pythonista/...), which is this path in Git. The post was correct, but it was wrong on GitHub.
 
@@ -1065,15 +1065,9 @@ Once you have created a new gitpod workspace and set up the new project, you are
 5. In order to find a solution to a problem, I often search on the Stackoverflow.
 6. The code for create event button as link was taken from **Where Is The Mouse**, Alexa Hendry helped me to sort it out.
     component dir > CreateEventForm.js file
-7. The Sign In / Sign yp pic created in **My Free Logo Maker** by Sediqa Talbi
+7. The Sign In / Sign up pic created in **My Free Logo Maker** by Sediqa Talbi
 
 
-
-Note: It's good to document here, I got app error at the very last min when I was cloning my frontend app with backend app, before everything was working as it should. you can find the screenshot of diffrent part of app in React README.md file in pythonista repository.
-I did automatic testing for both front app and backend app, It proves that app was wroking before cloning apps.
-
-Beside I did my very best to build a good project for pp5, as refugee I didn't have normal life like others, going from one cuntry to another. I did all the whole course in the way of finding a place to live, maybe I could do better than today's output, but the situation is beyond my contorl. I proud of myself to make it done as much as I could.
-**Thanks to everyone from CI who helped, listened, supported and understand me!**
 
 
 

@@ -113,7 +113,9 @@ import appStyles from "../../App.module.css";
           ...currentUser,
           profile_image: data.image,
         }));
-        history.goBack();
+        setTimeout(() => {
+        history.push(`/profiles/${id}/`);
+        }, 1000)
       } catch (err) {
         // console.log(err);
         setErrors(err.response?.data);

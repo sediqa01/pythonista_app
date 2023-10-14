@@ -64,7 +64,7 @@ REST_AUTH_SERIALIZERS = {
 SECRET_KEY = os.environ.get('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = os.environ.get('DEBUG')
 
 ALLOWED_HOSTS = [
     os.environ.get('ALLOWED_HOST'),
@@ -87,11 +87,12 @@ INSTALLED_APPS = [
     'rest_framework.authtoken',
     'dj_rest_auth',
     'django.contrib.sites',
-    'dj_rest_auth.registration',
-    'corsheaders',
+    
     'allauth',
     'allauth.account',
     'allauth.socialaccount',
+    'dj_rest_auth.registration',
+    'corsheaders',
     'joins',
     'conversations',
     'events',
