@@ -646,36 +646,110 @@ if 'CLIENT_ORIGIN_DEV' in os.environ:
 <h1 align="center">The Pythonista</h1> 
 
   Pythonista is a social app designed for Python developers. Pythonista is a dynamic community platform for programmers to connect, share insights, and embark on collective coding journeys in a digital age where collaboration fuels innovation.
-  Pythonista allows developers of all levels to easily connect to a global network of peers and a wealth of shared knowledge. Pythonista bridges the gap, fostering an ecosystem where the boundaries of code are transcended and the spirit of camaraderie reigns supreme. here you can find the [deployed link](https://pythonista-app-55ad01dd0732.herokuapp.com).
+  Pythonista allows developers of all levels to easily connect to a global network of peers and a wealth of shared knowledge. Pythonista bridges the gap, fostering an ecosystem where the boundaries of code are transcended and the spirit of camaraderie reigns supreme. here you can find the [deployed link](https://pythonista-app-55ad01dd0732.herokuapp.com)
 
   <!-- deployed link -->
   <!-- I AM Responsive image -->
+
+
+## Project
+
+### _Project Objective:_
+
+The primary objective of this Python developer social media app is to create a focused and dynamic platform that enables Python enthusiasts to connect, share, and engage around the core activities of post sharing, event management, user interaction, and job opportunities. This platform aims to provide a tailored and immersive experience for Python developers, promoting collaboration, knowledge sharing, community building, and career growth.
+
+### _Site User's Goal:_
+Python developers who use the app seek to achieve the following goals:
+
+1. Knowledge Sharing: Share Python-related posts, code snippets, insights, and job opportunities with the community to contribute to the collective learning experience.
+2. Networking: Connect with other Python developers to expand their professional network, seek opportunities for collaboration, and explore job openings.
+3. Event Engagement: Discover and participate in Python-related events, mark their attendance, and discuss event details and takeaways with fellow attendees.
+4. User Profile Management: Maintain a comprehensive user profile that showcases their Python expertise, projects, contributions, and job preferences.
+5. Interaction: Like, comment, and engage in discussions on posts, events, and job listings to foster meaningful conversations and interactions.
+6. Stay Informed: Stay up-to-date with the latest Python trends, developments, and community news.
+
+### _Site Owners' Goals:_
+
+The site owners aim to achieve the following objectives:
+
+1. User Engagement: Encourage active participation, interactions, and content sharing among users to create a vibrant and dynamic community.
+2. User Growth: Attract new Python developers to the platform and retain existing users, ensuring a steady increase in the user base, both for regular engagement and job-related activities.
+3. Quality Content: Maintain high-quality posts, comments, and event discussions, as well as ensure the quality of job listings by moderating and promoting valuable contributions.
+4. Event Success: Facilitate the effective management of Python-related events, ensuring a seamless experience for event organizers and attendees.
+5. Platform Sustainability: Ensure the long-term viability and relevance of the app within the Python developer community.
+
+By focusing on core features like post sharing, event management, and user interaction, the app can provide a highly specialized and valuable experience for Python developers while meeting the goals of site users and owners.
+
+
+## Project Management
+
+### _GitHub Project Board_
+
+In my project management journey, I've harnessed the incredible capabilities of GitHub Project Boards to meticulously organize and optimize my latest venture. It all began with a burst of creativity, inspired by my thoughtfully crafted **wireframe designs**. These designs formed the foundation for a series of meticulously detailed **user stories**, each serving as a critical building block in bringing my project to life.
+User stories are more than just descriptions; they provide a clear and logical path for development, ensuring that the final product aligns seamlessly with my vision. This deliberate approach maintains structure and time-bound progress.
+To further solidify this structure, I set up milestones, with a particular focus on the frontend application. Milestones serve as invaluable checkpoints, allowing me to track the project's journey and measure progress in manageable increments.
+But here's where it gets even more fascinating. I've adopted the **MoSCo** method to assign priorities to features and issues, categorizing them into Must-haves, Should-haves, Could-haves, and Won't-haves. This method is my secret weapon for making informed decisions, always ensuring that the essential components are addressed before delving into the finer details, thereby maximizing efficiency.
+Now, let's talk about ensuring quality. I've meticulously documented acceptance criteria for each user story. These criteria are the benchmarks of completion, leaving no room for ambiguity and ensuring every aspect of the project meets my lofty standards.
+To bring it all together, I've broken down each user story into a collection of granular tasks, intricately related to the overarching narrative. These tasks are the practical building blocks of execution, forming a tangible roadmap for my dedicated development team. They not only maintain the workflow's structure but also allow for a seamless division of labor.
+In essence, GitHub Project Boards, **user stories, milestones, MoSCo prioritization, acceptance criteria, and task breakdowns** create a harmonious symphony of project management. This approach keeps the project on the right track, ensuring that goals are met while fostering a culture of collaboration, organization, and the on-time delivery of a successful end product. [GitHub Project Board for Pythonista app](https://github.com/users/sediqa01/projects/7/views/1)
+
+![GitHub Project Board for Pythonista app](docs/images/PB.png)
+![GitHub Project Board for Pythonista app](docs/images/pb1.png)
+
+### _User Stories_
+
+1. As a User I can view the navigation bar throughout the site so that I can easily navigate between pages from anywhere.
+2. As a User I can Sign into the app so that I can access full site functionality.
+3. As a User I can Sign Out out of the app so that I can stop accessing full site functionality while not actively contributing to the site.
+4. As a User I can view user's profile picture so that I can easily identify users of the application.
+5. As a User I can create posts so that I can share my journey as Python Developer with the world!
+6. As a User I can view the details of a single post so that I can learn more about it.
+7. As a logged in User I can like a post so that I can show my support for the posts that interest me.
+8. As a User, I can search for posts, events and profiles with keywords, so that I can find the Posts, Events and User Profiles I am most interested in.
+9. As a User I can see a list of all posts so that I can see all posts that have been shared to the site.
+10. As a logged in user I can edit my own posts so that I can change the details or correct mistakes.
+11. As a logged in user I can create a comment so that I can engage with community.
+12. As a logged In user I can edit my own comments so that I can update or change the content of my existing comments.
+13. As a logged in user I can delete a comment that I created so that I can remove comments as I see fit.
+14. As a User I can view the profile page of another user so that I can see more details about that user.
+15. As a User I can edit my own profile details so that I can keep my profile information update.
+16. As a logged in user I can follow and unfollow other users so that I can easily add or remove users from my follower list.
+17. As a User I can discover more profiles so that I can find more people to follow.
+18. As a logged in user I can create an event so that I can promote an event in Pythonista app.
+19. As a logged in user I can edit my own events so that I can change the details or correct mistakes.
+20. As a logged in user I can delete my own events so that I can remove events from event list on my profile.
+21. As a User I can see the details of a single event so that I can read everything relating that events.
+22. As a user I can search the events list so that I can find events that interest me more.
+23. As a logged in user I can mark Join to an event post so that I can publicly display my interest in an event.
+24. As a logged in user I can create a conversation so that I can publicly show my thoughts or involve in a conversation about an event.
+25. As a logged in user I can edit my Conversation so that I can correct mistakes or add more word.
+26. As a logged in user I can delete a conversation that I created so that I can remove my conversation from the list.
 
 ## Features
 
 
 ### _Existing Features_
+**Navigation Bar**
 
- * **Navigation Bar**
+![NavBar](frontend/src/assets/readme/navbar-desktop.jpg)
 
-    ![NavBar](frontend/src/assets/readme/navbar-desktop.jpg)
+The navigation bar includes various clickable links, allowing the user to easily access the pages on the app. The links change according to whether the user is signed in or out, giving them access to more content once signed in.
+The links on the navbar are:
 
-    The navigation bar includes various clickable links, allowing the user to easily access the pages on the app. The links change according to whether the user is signed in or out, giving them access to more content once signed in.
-    The links on the navbar are:
-
-    * Pythonista Logo
-    * Home
-    * Create Post
-    * Event
-    * User Action (displayed as dropdown menu )
-        * Profile
-        * Sign Out
-    * Sign Up
-    * Sign In
+* Pythonista Logo
+* Home
+* Create Post
+* Event
+* User Action (displayed as dropdown menu )
+    * Profile
+    * Sign Out
+* Sign Up
+* Sign In
 
    
     To make navigating easy for the user, the navigation bar is fixed, meaning it stays at the top of the page when the user scrolls down.
 
+ * 
     The navigation bar displays in the same manner on all pages, ensuring uniformity across the app.
 
     A hover effect is incorporated, with the icons changing to a turquoise color and the cursor becoming a pointer on both the text and the icons, to help the user realize that the link is clickable.
