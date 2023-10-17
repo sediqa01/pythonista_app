@@ -646,7 +646,7 @@ if 'CLIENT_ORIGIN_DEV' in os.environ:
 <h1 align="center">The Pythonista</h1> 
 
   Pythonista is a social app designed for Python developers. Pythonista is a dynamic community platform for programmers to connect, share insights, and embark on collective coding journeys in a digital age where collaboration fuels innovation.
-  Pythonista allows developers of all levels to easily connect to a global network of peers and a wealth of shared knowledge. Pythonista bridges the gap, fostering an ecosystem where the boundaries of code are transcended and the spirit of camaraderie reigns supreme. 
+  Pythonista allows developers of all levels to easily connect to a global network of peers and a wealth of shared knowledge. Pythonista bridges the gap, fostering an ecosystem where the boundaries of code are transcended and the spirit of camaraderie reigns supreme. here you can find the [deployed link](https://pythonista-app-55ad01dd0732.herokuapp.com).
 
   <!-- deployed link -->
   <!-- I AM Responsive image -->
