@@ -19,6 +19,8 @@ import Container from "react-bootstrap/Container";
 import { useSetCurrentUser } from "../../contexts/CurrentUserContext";
 import { useRedirect } from "../../hooks/useRedirect";
 import { setTokenTimestamp } from "../../utils/utils";
+// Notifications
+import { NotificationManager } from "react-notifications";
 
 function SignInForm() {
     const setCurrentUser = useSetCurrentUser();
@@ -49,10 +51,17 @@ function SignInForm() {
           setCurrentUser(data.user);
           setTokenTimestamp(data);
           history.goBack();
+            // Displaying a success notification to the user
+          NotificationManager.success(
+            "Welcome " + username + ", You signed in successfully!",
+            "Success!"
+          );
         } catch (err) {
           /* optional chaining (?) to check if there is a an error response */
           setErrors(err.response?.data);
-        }
+          // Displaying an error notification to the user
+          NotificationManager.error("Not loggedin, check your details!", "Error");
+        }  
       };
   
 

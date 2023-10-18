@@ -8,6 +8,9 @@ import styles from "../../styles/Comment.module.css";
 import Avatar from "../../components/Avatar";
 // Axios import
 import { axiosRes } from "../../api/axiosDefaults";
+// Notifications
+import { NotificationManager } from "react-notifications";
+
 
 function CommentCreateForm(props) {
   const { post, setPost, setComments, profileImage, profile_id } = props;
@@ -37,8 +40,14 @@ function CommentCreateForm(props) {
         ],
       }));
       setContent("");
+     // Show a success notification
+     NotificationManager.success("Comment added successfully", "Success!");
     } catch (err) {
-     // console.log(err);
+      // Show an error notification if there was an issue creating the comment
+      NotificationManager.error(
+        "There was an issue adding your comment",
+        "Error"
+      );
     }
   };
 

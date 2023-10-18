@@ -17,6 +17,8 @@ import Image from "react-bootstrap/Image";
 import Container from "react-bootstrap/Container";
 // Component imports
 import { useRedirect } from "../../hooks/useRedirect";
+// Notifications
+import { NotificationManager } from "react-notifications";
 
     const SignUpForm = () => {
       useRedirect('loggedIn')
@@ -45,9 +47,12 @@ import { useRedirect } from "../../hooks/useRedirect";
         /* include the signUpData supplied and reroute to the URL */
         await axios.post("dj-rest-auth/registration/", signUpData);
         history.push("/signin");
+        NotificationManager.success("Congrast! Account created successfully", "Success!");
     } catch (err) {
         /* optional chaining(?): to check if there is a an error response */
         setErrors(err.response?.data);
+        NotificationManager.error("There was an issue with sign up", "Error");
+
     }
     };    
 

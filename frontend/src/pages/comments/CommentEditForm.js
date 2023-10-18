@@ -5,6 +5,8 @@ import Form from "react-bootstrap/Form";
 import styles from "../../styles/Comment.module.css";
 // axios import
 import { axiosRes } from "../../api/axiosDefaults";
+// Notifications
+import { NotificationManager } from "react-notifications";
 
 
 function CommentEditForm(props) {
@@ -33,10 +35,16 @@ function CommentEditForm(props) {
         }),
       }));
       setShowEditForm(false);
-    } catch (err) {
-      //console.log(err);
-    }
-  };
+    // Show a success notification
+    NotificationManager.info("Comment Edited!");
+  } catch (err) {
+    // Show an error notification if there was an issue updating the comment
+    NotificationManager.error(
+      "There was an issue editing your comment",
+      "Error"
+    );
+  }
+};
 
   return (
     <Form onSubmit={handleSubmit}>

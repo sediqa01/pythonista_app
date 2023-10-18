@@ -12,6 +12,8 @@ import { MoreDropdown } from "../../components/MoreDropdown";
 import { useCurrentUser } from "../../contexts/CurrentUserContext";
 import Avatar from "../../components/Avatar";
 import CommentEditForm from "./CommentEditForm";
+// Notifications
+import { NotificationManager } from "react-notifications";
 
 const Comment = (props) => {
   const { 
@@ -45,8 +47,17 @@ const Comment = (props) => {
         ...prevComments,
         results: prevComments.results.filter((comment) => comment.id !== id),
       }));
-    } catch (err) {}
-  };
+       // Show a success notification
+       NotificationManager.info("Comment Deleted!");
+      } catch (err) {
+        // Show an error notification if there was an issue deleting the comment
+        NotificationManager.error(
+          "There is an issue with deleting comment",
+          "Error"
+        );
+      }
+    };
+  
 
   return (
     <div className="mt-3">
