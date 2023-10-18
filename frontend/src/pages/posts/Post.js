@@ -3,7 +3,6 @@ import { Link, useHistory  } from "react-router-dom";
 // css
 import styles from "../../styles/Post.module.css";
 import appStyles from "../../App.module.css"
-
 // bootstrap
 import Card from 'react-bootstrap/Card';
 import Media from 'react-bootstrap/Media';
@@ -14,6 +13,8 @@ import { useCurrentUser } from "../../contexts/CurrentUserContext";
 import Avatar from "../../components/Avatar";
 import { axiosRes } from "../../api/axiosDefaults";
 import { MoreDropdown } from '../../components/MoreDropdown';
+// Notifications
+import { NotificationManager } from "react-notifications";
 
 const Post = (props) => {
     const {
@@ -42,9 +43,15 @@ const Post = (props) => {
       const handleDelete = async () => {
         try {
           await axiosRes.delete(`/posts/${id}/`);
-          history.goBack();
+          history.push(`/`);
+          // show an info notification
+          NotificationManager.info("Post Deleted!!"); 
         } catch (err) {
-          // console.log(err);
+          // show an error notification
+          NotificationManager.error(
+            "There was an issue deleting your post",
+            "Error"
+          );
         }
       };
 

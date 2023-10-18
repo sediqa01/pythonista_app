@@ -14,7 +14,8 @@ import { useCurrentUser } from "../../contexts/CurrentUserContext";
 // css
 import btnStyles from "../../styles/Button.module.css";
 import appStyles from "../../App.module.css";
-
+// Notifications
+import { NotificationManager } from "react-notifications";
 
 const UserPasswordForm = () => {
   useRedirect('loggedOut')
@@ -49,13 +50,19 @@ const UserPasswordForm = () => {
     try {
       await axiosRes.post("/dj-rest-auth/password/change/", userData);
       history.goBack();
+      // Show a success notification
+      NotificationManager.success("Username Updated", "Success!");
     } catch (err) {
-      // console.log(err);
       setErrors(err.response?.data);
+      // If there's an error, show an error notification
+      NotificationManager.error(
+        "There was an issue updating your username",
+        "Error"
+      );
     }
-  };
+};
 
-  return (
+return (
     <Row>
       <Col className="py-2 mx-auto text-center" md={6}>
         <Container className={appStyles.Content}>

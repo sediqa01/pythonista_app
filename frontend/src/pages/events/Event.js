@@ -16,6 +16,8 @@ import { axiosRes } from "../../api/axiosDefaults";
 // css
 import appStyles from "../../App.module.css";
 import styles from "../../styles/Event.module.css"
+// Notifications
+import { NotificationManager } from "react-notifications";
 
 
 const Event = (props) => {
@@ -82,9 +84,7 @@ const Event = (props) => {
         } catch (err) {
           // console.log(err);
         }
-      };
-
-      
+      }; 
 
     const handleEdit = () => {
       history.push(`/events/${id}/edit`);
@@ -93,11 +93,18 @@ const Event = (props) => {
     const handleDelete = async () => {
       try {
         await axiosRes.delete(`/events/${id}/`);
-        history.goBack();
+        history.push(`/events`);
+        // show a info notification
+        NotificationManager.info("Event Deleted!!");
       } catch (err) {
-        // console.log(err);
+        // show an error notification
+        NotificationManager.error(
+          "There was an issue deleting event",
+          "Error"
+        );
       }
     };
+  
   return (
     <Card className={styles.Event}>
         <Card.Body>

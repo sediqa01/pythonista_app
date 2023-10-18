@@ -16,7 +16,8 @@ import btnStyles from "../../styles/Button.module.css";
 import { axiosReq } from "../../api/axiosDefaults";
 // component
 import { useRedirect } from "../../hooks/useRedirect";
-
+// Notifications
+import { NotificationManager } from "react-notifications";
 
 function EventEditForm() {
   useRedirect("loggedOut");
@@ -118,13 +119,20 @@ function EventEditForm() {
       try {
         await axiosReq.put(`/events/${id}/`, formData);
         history.push(`/events/${id}`);
+        // Show success notification
+        NotificationManager.success("Event updated successfully", "Success!");
       } catch (err) {
         // console.log(err);
         if (err.response?.status !== 401) {
           setErrors(err.response?.data);
-        }
+          // Show error notification
+          NotificationManager.error(
+          "There was an issue updating event",
+          "Error"
+        );
       }
-    };
+    }
+  };
   
 
   const textFields = (

@@ -19,6 +19,8 @@ import { axiosReq } from "../../api/axiosDefaults";
 import { useRedirect } from "../../hooks/useRedirect";
 // event-date validation import
 import { isValid, parseISO, isAfter } from 'date-fns';
+// Notifications
+import { NotificationManager } from "react-notifications";
 
 function EventCreateForm() {
     useRedirect("loggedOut");
@@ -91,10 +93,17 @@ function EventCreateForm() {
     try {
       const { data } = await axiosReq.post("/events/", formData);
       history.push(`/events/${data.id}`);
+      // show a success notification
+      NotificationManager.success("Event created successfully!", "Success!");
     } catch (err) {
       // console.log(err);
       if (err.response?.status !== 401) {
         setErrors(err.response?.data);
+        // show an error notification
+        NotificationManager.error(
+          "There is an issue adding the event",
+          "Error"
+        );
       }
     }
   };

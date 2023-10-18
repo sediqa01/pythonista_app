@@ -17,7 +17,8 @@ import {
 // css
 import btnStyles from "../../styles/Button.module.css";
 import appStyles from "../../App.module.css";
-
+// Notifications
+import { NotificationManager } from "react-notifications";
 
 const UsernameForm = () => {
   useRedirect('loggedOut')
@@ -49,11 +50,17 @@ const UsernameForm = () => {
         username,
       }));
       history.goBack();
-    } catch (error) {
-      // console.log(error);
-      setErrors(error.response?.data);
-    }
-  };
+      // Display success notification
+      NotificationManager.success("Password Updated!!", "Success!");
+  } catch (err) {
+      setErrors(err.response?.data);
+      // Display error notification
+      NotificationManager.error(
+        "There was an issue updating your password",
+        "Error"
+      );
+  }
+};
 
   return (
     <Row>

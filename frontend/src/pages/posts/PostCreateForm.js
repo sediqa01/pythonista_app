@@ -17,7 +17,8 @@ import { useRedirect } from "../../hooks/useRedirect";
 import styles from "../../styles/PostCreateEditForm.module.css";
 import appStyles from "../../App.module.css";
 import btnStyles from "../../styles/Button.module.css";
-
+// Notifications
+import { NotificationManager } from "react-notifications";
 
 function PostCreateForm() {
   useRedirect('loggedOut')
@@ -57,12 +58,20 @@ function PostCreateForm() {
     try {
       const { data } = await axiosReq.post("/posts/", formData);
       history.push(`/posts/${data.id}`);
-    } catch (error) {
-      if (error.response?.status !== 401) {
-        setErrors(error.response?.data);
+      // show a success notification
+      NotificationManager.success("Post created successfully!", "Success!");
+    } catch (err) {
+      if (err.response?.status !== 401) {
+        setErrors(err.response?.data);
+        // show an error notification
+        NotificationManager.error(
+          "There is an issue adding the post",
+          "Error"
+        );
       }
     }
   };
+
 
   const textFields = (
     <div className="text-center pt-0 pt-lg-4">

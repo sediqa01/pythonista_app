@@ -19,9 +19,10 @@ import { useRedirect } from "../../hooks/useRedirect";
 // css
 import btnStyles from "../../styles/Button.module.css";
 import appStyles from "../../App.module.css";
-
+// Notifications
+import { NotificationManager } from "react-notifications";
   
-  const ProfileEditForm = () => {
+const ProfileEditForm = () => {
     useRedirect('loggedOut')
     const currentUser = useCurrentUser();
     const setCurrentUser = useSetCurrentUser();
@@ -116,9 +117,16 @@ import appStyles from "../../App.module.css";
         setTimeout(() => {
         history.push(`/profiles/${id}/`);
         }, 1000)
+        
+        // Display success notification
+        NotificationManager.success("Profile Updated!", "Success!");
       } catch (err) {
-        // console.log(err);
         setErrors(err.response?.data);
+        // Display error notification
+        NotificationManager.error(
+          "There was an issue updating your profile",
+          "Error"
+        );
       }
     };
   

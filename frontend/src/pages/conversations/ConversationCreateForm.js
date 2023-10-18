@@ -8,6 +8,8 @@ import styles from "../../styles/Comment.module.css";
 import Avatar from "../../components/Avatar";
 // axios
 import { axiosRes } from "../../api/axiosDefaults";
+// Notifications
+import { NotificationManager } from "react-notifications";
 
 function ConversationCreateForm(props) {
     const { event, setEvent, setConversation, profileImage, profile_id } = props;
@@ -36,10 +38,16 @@ function ConversationCreateForm(props) {
           ],
         }));
         setContent("");
-    } catch (err) {
-      //console.log(err);
-    }
-  };
+      // Show a success notification
+      NotificationManager.success("Comment added successfully", "Success!");
+  } catch (err) {
+    // Show an error notification if there was an issue creating the comment
+    NotificationManager.error(
+      "There was an issue adding your comment",
+      "Error"
+    );
+  }
+};
   
   return (
     <Form className="mt-2" onSubmit={handleSubmit}>

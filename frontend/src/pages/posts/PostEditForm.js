@@ -15,6 +15,8 @@ import btnStyles from "../../styles/Button.module.css";
 // component
 import { axiosReq } from "../../api/axiosDefaults";
 import { useRedirect } from "../../hooks/useRedirect";
+// Notifications
+import { NotificationManager } from "react-notifications";
 
 function  PostEditForm() {
   useRedirect('loggedOut')
@@ -71,16 +73,23 @@ function  PostEditForm() {
         formData.append("image", imageInput.current.files[0]);
       }
   
-      try {
-        await axiosReq.put(`/posts/${id}/`, formData);
-        history.push(`/posts/${id}`);
-      } catch (err) {
-        console.log(err);
-        if (err.response?.status !== 401) {
-          setErrors(err.response?.data);
-        }
+    try {
+      await axiosReq.put(`/posts/${id}/`, formData);
+      history.push(`/posts/${id}`);
+      // Show success notification
+      NotificationManager.success("Post updated successfully", "Success!");
+    } catch (err) {
+      if (err.response?.status !== 401) {
+        setErrors(err.response?.data);
+        // Show error notification
+        NotificationManager.error(
+          "There was an issue updating your post",
+          "Error"
+        );
       }
-    };
+    }
+  };
+
 
   const textFields = (
     <div className="text-center pt-0 pt-lg-4">

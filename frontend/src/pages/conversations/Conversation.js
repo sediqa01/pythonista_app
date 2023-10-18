@@ -10,6 +10,8 @@ import { useCurrentUser } from '../../contexts/CurrentUserContext';
 import ConversationEditForm from "./ConversationEditForm";
 // CSS import
 import styles from "../../styles/Comment.module.css";
+// Notifications
+import { NotificationManager } from "react-notifications";
 
 const Conversation = (props) => {
   const {
@@ -42,10 +44,16 @@ const Conversation = (props) => {
             ...prevConversations,
             results: prevConversations.results.filter((conversation) => conversation.id !== id),
         }));
+      // Show a success notification
+      NotificationManager.info("Comment Deleted!");
     } catch (err) {
-        // console.log(err)
+      // Show an error notification if there was an issue deleting the comment
+      NotificationManager.error(
+        "There is an issue with deleting comment",
+        "Error"
+      );
     }
-};
+  };
 
 return (
     <div className="mt-3">
