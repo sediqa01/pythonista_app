@@ -14,7 +14,8 @@ import axios from 'axios';
 import Avatar from './Avatar';
 import { removeTokenTimestamp } from "../utils/utils";
 import { useCurrentUser, useSetCurrentUser } from '../contexts/CurrentUserContext';
-
+// Notifications
+import { NotificationManager } from "react-notifications";
 
 const NavBar = () => {
   const currentUser = useCurrentUser();
@@ -28,8 +29,12 @@ const NavBar = () => {
       setCurrentUser(null);
       removeTokenTimestamp();
       setToggleNavBar(!toggleNavBar);
+      // Show a success notification
+      NotificationManager.info("You are Signed Out!");
     } catch (err) {
       //console.log(err);
+      // Show an error notification if there was an issue with sign out
+      NotificationManager.error("There was an issue signing you out", "Error");
     }
   };
 

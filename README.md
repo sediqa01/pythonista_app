@@ -1,5 +1,15 @@
-# Pythonista DRF API
+<h1 align="center">The Pythonista</h1> 
 
+  Pythonista is a social app designed for Python developers. Pythonista is a dynamic community platform for programmers to connect, share insights, and embark on collective coding journeys in a digital age where collaboration fuels innovation.
+  Pythonista allows developers of all levels to easily connect to a global network of peers and a wealth of shared knowledge. Pythonista bridges the gap, fostering an ecosystem where the boundaries of code are transcended and the spirit of camaraderie reigns supreme. here you can find the [Deployed Link](https://pythonista-app-55ad01dd0732.herokuapp.com)
+
+  <!-- I AM Responsive image -->
+  ![The Pythonista](docs/images/AmIResponsive.png)
+
+
+#  Unifying DRF Api and React parts into a unified workspace
+
+## A. Pythonista DRF API Documentation
 The Pythonista DRF API is a back-end API created using Django Rest Framework to serve the Pythonista React app. It handles all backend functionality including user Profiles, Posts, Comments, Likes, Events, Conversation on an event's post, Join, Following and Followers feature.
 
 ## Database Designs
@@ -641,19 +651,9 @@ if 'CLIENT_ORIGIN_DEV' in os.environ:
 * Django Rest Framework Documentation
 
 
--------------------
+# B. The Pythonista Front-end Documentation
 
-<h1 align="center">The Pythonista</h1> 
-
-  Pythonista is a social app designed for Python developers. Pythonista is a dynamic community platform for programmers to connect, share insights, and embark on collective coding journeys in a digital age where collaboration fuels innovation.
-  Pythonista allows developers of all levels to easily connect to a global network of peers and a wealth of shared knowledge. Pythonista bridges the gap, fostering an ecosystem where the boundaries of code are transcended and the spirit of camaraderie reigns supreme. here you can find the [deployed link](https://pythonista-app-55ad01dd0732.herokuapp.com)
-
-  <!-- deployed link -->
-  <!-- I AM Responsive image -->
-
-
-## Project
-
+##  User Experience
 ### _Project Objective:_
 
 The primary objective of this Python developer social media app is to create a focused and dynamic platform that enables Python enthusiasts to connect, share, and engage around the core activities of post sharing, event management, user interaction, and job opportunities. This platform aims to provide a tailored and immersive experience for Python developers, promoting collaboration, knowledge sharing, community building, and career growth.
@@ -1105,6 +1105,12 @@ No bugs so far.
 * **Moqups -** Used  to create the mock-ups during the design process, as well as Sign Up and Sign In hero images.
 * **date-fns -** Installed to validate event date.
 * **msw -** Mock Service Worker, Used for testing.
+* **React Router -** React library for rendering components in the DOM.
+* **Axios -** To tell the React project to send requests to the API.
+* **React Infinite Scroll Component -** For implementing infinite scrolling.
+* **Jwt-Decode -** Securely implement authentication with JSON Web Tokens.
+* **Pillow -** Adds image processing capabilities to your Python interpreter.
+* **React Notifications -** Library for displaying notifications.
 
 ## Components
 
@@ -1121,9 +1127,36 @@ The following components have been implemented in this project and reused throug
 
 ## Deployment
 
-### _Heroku_
 
-Once you have created a new gitpod workspace and set up the new project, you are ready to deploy to Heroku.
+
+### Steps Before Beployment 
+
+1. Run npm audit fix in the frontend to fix API errors and feedback
+2. collect the admin and DRF staticfiles with the followin command in the terminal:
+```
+  python3 manage.py collectstatic
+```
+3. compile the React application and move its files to the staticfiles folder. In the terminal, cd into the frontend directory typing:
+```
+cd frontend
+```
+4. Run the command to compile and move the React files:
+```
+  npm run build && mv build ../staticfiles/.
+```
+**Note:** We need to re-run this command any time you want to deploy changes to the static files in your project, including the React code. To do this, you need to delete the existing build folder and rebuild it. This command will delete the old folder and replace it with the new one:
+```
+  npm run build && rm -rf ../staticfiles/build && mv build ../staticfiles/.
+```
+5. Create a new file in the root directory named runtime.txt
+6. Inside the runtime.txt, add the following line: `python-3.9.16`
+7. In the `env.py` file, ensure that both the `DEBUG` and `DEV` enviroment varibles are comment out.
+
+8. Run the Django server, in the terminal type: python3 manage.py runserver, then open the preview on `port 8000` to check that your application is runnig. The React server should be not be running. This is a test to check that Django is serving the React static files.
+
+9. Commit and push the changes.
+
+### _Heroku_
 
 1. In your heroku account, select Create New App, and give it a unique name related to your project.
 2. Select a region corresponding to where you live and click `Create App`.
@@ -1131,23 +1164,47 @@ Once you have created a new gitpod workspace and set up the new project, you are
 4. Click `Deploy branch` to trigger Heroku to start building the application.
 5. Once you see the message saying 'build succeeded' you can click `Open App` to see your application in the browser.
 
+## **Project Issue and Resolution**
+
+### **Issue:**
+
+The primary issue that led to the project's failure was the use of an inappropriate GitHub template. I mistakenly utilized the CodeAnywhere template for the Gitpod development environment. This was due to the lack of clarity in our Learning Management System (LMS) regarding which template it is – the Gitpod template or the CodeAnywhere template.
+Furthermore, a crucial reason for our project's shortcomings was the lack of updates to the static files. The process was somewhat fragmented, as after consolidating changes, new modifications in the static files needed to be added, and the old "build" folder had to be deleted. Unfortunately, this crucial detail was not adequately communicated to students through the LMS, leading to my unsuccessful project submission.
+
+### **Resolution:**
+
+To address these issues, I sought guidance from our tutor, Sean.
+- Created a new repository using the correct Gitpod template for the development environment.
+- Successfully transferred project code from the original repository to the new one.
+- Utilized below command to update static files:
+```
+npm run build && rm -rf ../staticfiles/build && mv build ../staticfiles/.
+```
+
+### Clearfication about Repositories 
+Here you can find the repositories that I created for pp5 to address my progress:
+
+1. [Pythonista App](https://github.com/sediqa01/pythonista_app) : The current repository for PP5 was recently created, using the appropriate GitHab template tailored for myproject needs.
+
+2. [Pythonista API](https://github.com/sediqa01/pythonista_api) :The Pythonista API repository was established specifically for DRF-API, and I subsequently cloned the frontend repository alongside it. This led to an unsuccessful deployment due to an incorrect template for this project.
+
+3. [Pythonista](https://github.com/sediqa01/pythonista) : Initially, this repository was dedicated to the front-end development. It held the complete progress of my project before the cloning phase, serving as a comprehensive reference for all aspects of my work. also I created 
+
+
+## Note: Agile Development Progress in the Front-End Repository [Pythonista](https://github.com/sediqa01/pythonista)
+
+Within the Front-End Repository, you can find a comprehensive record of my Agile development progress. I took an Agile approach and created user stories for the project in this repository.
+It's worth noting that when I initially started the project, there was no mention of unifying the repositories. Therefore, this repository stands as a complete reference for the stages of my work, capturing the evolution of the project from its inception.
+The user stories and associated progress in this repository serve as a valuable resource for understanding the project's development journey, highlighting the iterative and adaptable nature of our Agile approach.
 
 ## Credits
 
 1. The **Code Institute moments** walkthrough project both backend and frontend was a big guide.
-2. The Upload image on the create event, and create postis taken from pngtree.com
-3. With the help of my mentor **Adegbenga Adeye**, I added the event_date validation using date-fns.
+2. The Upload image on the create event, and create post taken from **pngtree.com**
+3. With the help of my mentor **Adegbenga Adeye**, I added the `event_date` validation using **date-fns.**
 4. The image for not found page was taken from **Iconduck** site.
-5. In order to find a solution to a problem, I often search on the Stackoverflow.
+5. In order to find a solution to a problem, I often search on the **Stackoverflow.**
 6. The code for create event button as link was taken from **Where Is The Mouse**, Alexa Hendry helped me to sort it out.
     component dir > CreateEventForm.js file
 7. The Sign In / Sign up pic created in **My Free Logo Maker** by Sediqa Talbi
-
-
-
-
-
-
-
-
-
+8. The **react-notification** library were used for displaying notifications. 
