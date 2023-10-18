@@ -693,6 +693,8 @@ Now, let's talk about ensuring quality. I've meticulously documented acceptance 
 To bring it all together, I've broken down each user story into a collection of granular tasks, intricately related to the overarching narrative. These tasks are the practical building blocks of execution, forming a tangible roadmap for my dedicated development team. They not only maintain the workflow's structure but also allow for a seamless division of labor.
 In essence, GitHub Project Boards, **user stories, milestones, MoSCo prioritization, acceptance criteria, and task breakdowns** create a harmonious symphony of project management. This approach keeps the project on the right track, ensuring that goals are met while fostering a culture of collaboration, organization, and the on-time delivery of a successful end product. [GitHub Project Board for Pythonista app](https://github.com/users/sediqa01/projects/7/views/1)
 
+### Note: The created issues for the Pythonista app can be found in [this repository](https://github.com/sediqa01/pythonista). I have created and linked the issues with the separate React repository dedicated to developing the front-end.
+
 ![GitHub Project Board for Pythonista app](docs/images/PB.png)
 ![GitHub Project Board for Pythonista app](docs/images/pb1.png)
 

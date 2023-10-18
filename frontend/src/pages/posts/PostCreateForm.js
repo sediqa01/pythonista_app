@@ -130,7 +130,7 @@ function PostCreateForm() {
                   className="d-flex justify-content-center"
                   htmlFor="image-upload"
                 >
-                  <Asset src={Upload} message="Click or tap to uplaod an Image" /> 
+                  <Asset src={Upload} message="Click or tap to upload an Image" /> 
                 </Form.Label>
               )}
               <Form.File
